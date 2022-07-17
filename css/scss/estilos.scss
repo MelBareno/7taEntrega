@@ -193,11 +193,11 @@ body {
 a { 
     color      : var(--color-1);
     transition : all 0.3s ease-in-out;
-:focus,
-:hover,
-:active {
+a:focus,
+a:hover,
+a:active {
     color : var(--color-2);
-&:active {
+&a:active {
     outline : 0;
 }
 }

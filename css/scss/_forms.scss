@@ -60,3 +60,22 @@ label>input[type="radio"] {
     position : relative;
     top      : 2px;
 }
+
+@use "sass:map";
+
+@mixin flex-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+$estilos :(
+    color: var(--color-1-lighter),
+    centro: center,
+    tFuente:  var( --text-md ),
+);
+
+.formstyle {
+    background-color: map-get($estilos, color);
+    @include flex-center;
+}

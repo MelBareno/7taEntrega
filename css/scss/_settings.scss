@@ -11,9 +11,7 @@
          --font-2    : "Heebo", sans-serif;
        }
      
-     /* ------------------------------------------------------------------- 
-      * ## colors
-      * ------------------------------------------------------------------- */
+     /* ## colors */
      :root {
      
          /* color-1(#3F885C)*/
@@ -66,11 +64,7 @@
          --color-btn-text                : var(--color-black);
          --color-btn-hover               : var(--color-gray-8);
          --color-btn-hover-text          : var(--color-black);
-         
-         /* preloader*/
-          --color-preloader-bg            : var(--color-gray-19);
-          --color-loader                  : rgba(169, 249, 192, 0.733);
-          --color-loader-light            : rgba(255, 255, 255, 0.1);
+        
      
          /* others
           */

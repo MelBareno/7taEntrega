@@ -1,17 +1,14 @@
 /* BUTTONS */
- .btn,
- button,
- input[type="submit"],
- input[type="reset"],
- input[type="button"] {
-     --btn-height            : var(--vspace-btn);
+
+
+.button,
+.btn, {
+
      display                 : inline-block;
      font-family             : var(--font-1);
      font-weight             : 500;
      font-size               : var(--text-size);
      letter-spacing          : 0.02em;
-     height                  : var(--btn-height);
-     line-height             : calc(var(--btn-height) - 4px);
      padding                 : 0 3.6rem;
      margin                  : 0 0.4rem var(--vspace-0_5) 0;
      color                   : var(--color-btn-text);
@@ -25,19 +22,42 @@
      border                  : 2px solid var(--color-btn);
     }
  
+    input[type="submit"],
+    input[type="reset"],
+    input[type="button"], {
+        @extend .btn;
+        background-color: pink;
+    }
+    
+ .button, 
  .btn:focus,
- button:focus,
  input[type="submit"]:focus,
  input[type="reset"]:focus,
  input[type="button"]:focus,
- .btn:hover,
  button:hover,
+ .btn:hover,
  input[type="submit"]:hover,
  input[type="reset"]:hover,
- input[type="button"]:hover {
+ input[type="button"]:hover, {
      background-color : var(--color-btn-hover);
      border-color     : var(--color-btn-hover);
      color            : var(--color-btn-hover-text);
      outline          : 0;
  }
+ 
+ /*color redes*/
+
+ $tiposredes: (
+    logo: var(--color-gray-12),
+    linkedin: #0e76a8,
+    facebook: #3b5998,
+    instagram: #f09433,
+ );
+
+ // @each $key, $value in <list> map*/
+ 
+@each $tiposredes,$color in $tiposredes {
+    .btn--#{$tiposredes}{background-color:$color ;}
+    
+}
  
